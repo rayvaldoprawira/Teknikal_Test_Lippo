@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alokasi", "Alokasi\Alokasi.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Penalty", "Penalty\Penalty.csproj", "{3C3C7803-8CE9-4A32-92C8-A1F1173DF635}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algoritma1", "Algoritma1\Algoritma1\Algoritma1.csproj", "{5165294F-13C4-4A5B-BE3C-9810A49018C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algoritma1", "Algoritma1\Algoritma1\Algoritma1.csproj", "{5165294F-13C4-4A5B-BE3C-9810A49018C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algoritma2", "Algoritma2\Algoritma2\Algoritma2.csproj", "{E1026D32-F8EF-41CF-B4DD-8C3A84A0E8F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{5165294F-13C4-4A5B-BE3C-9810A49018C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5165294F-13C4-4A5B-BE3C-9810A49018C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5165294F-13C4-4A5B-BE3C-9810A49018C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1026D32-F8EF-41CF-B4DD-8C3A84A0E8F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1026D32-F8EF-41CF-B4DD-8C3A84A0E8F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1026D32-F8EF-41CF-B4DD-8C3A84A0E8F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1026D32-F8EF-41CF-B4DD-8C3A84A0E8F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

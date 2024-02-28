@@ -1,0 +1,15 @@
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\bin\Debug\net6.0\Algoritma2.exe
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\bin\Debug\net6.0\Algoritma2.deps.json
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\bin\Debug\net6.0\Algoritma2.runtimeconfig.json
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\bin\Debug\net6.0\Algoritma2.dll
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\bin\Debug\net6.0\Algoritma2.pdb
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\obj\Debug\net6.0\Algoritma2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\obj\Debug\net6.0\Algoritma2.AssemblyInfoInputs.cache
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\obj\Debug\net6.0\Algoritma2.AssemblyInfo.cs
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\obj\Debug\net6.0\Algoritma2.csproj.CoreCompileInputs.cache
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\obj\Debug\net6.0\Algoritma2.sourcelink.json
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\obj\Debug\net6.0\Algoritma2.dll
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\obj\Debug\net6.0\refint\Algoritma2.dll
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\obj\Debug\net6.0\Algoritma2.pdb
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\obj\Debug\net6.0\Algoritma2.genruntimeconfig.cache
+C:\Users\Ray\source\repos\lippoTest\Algoritma2\Algoritma2\obj\Debug\net6.0\ref\Algoritma2.dll
