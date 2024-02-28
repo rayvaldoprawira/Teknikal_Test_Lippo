@@ -1,0 +1,14 @@
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\lippoTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\lippoTest.AssemblyInfoInputs.cache
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\lippoTest.AssemblyInfo.cs
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\lippoTest.csproj.CoreCompileInputs.cache
+C:\Users\Ray\source\repos\lippoTest\bin\Debug\net6.0\lippoTest.exe
+C:\Users\Ray\source\repos\lippoTest\bin\Debug\net6.0\lippoTest.deps.json
+C:\Users\Ray\source\repos\lippoTest\bin\Debug\net6.0\lippoTest.runtimeconfig.json
+C:\Users\Ray\source\repos\lippoTest\bin\Debug\net6.0\lippoTest.dll
+C:\Users\Ray\source\repos\lippoTest\bin\Debug\net6.0\lippoTest.pdb
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\lippoTest.dll
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\refint\lippoTest.dll
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\lippoTest.pdb
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\lippoTest.genruntimeconfig.cache
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\ref\lippoTest.dll

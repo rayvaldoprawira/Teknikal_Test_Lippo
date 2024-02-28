@@ -1,0 +1,14 @@
+C:\Users\Ray\source\repos\lippoTest\bin\Debug\net6.0\Penalty.exe
+C:\Users\Ray\source\repos\lippoTest\bin\Debug\net6.0\Penalty.deps.json
+C:\Users\Ray\source\repos\lippoTest\bin\Debug\net6.0\Penalty.runtimeconfig.json
+C:\Users\Ray\source\repos\lippoTest\bin\Debug\net6.0\Penalty.dll
+C:\Users\Ray\source\repos\lippoTest\bin\Debug\net6.0\Penalty.pdb
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\Penalty.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\Penalty.AssemblyInfoInputs.cache
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\Penalty.AssemblyInfo.cs
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\Penalty.csproj.CoreCompileInputs.cache
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\Penalty.dll
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\refint\Penalty.dll
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\Penalty.pdb
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\Penalty.genruntimeconfig.cache
+C:\Users\Ray\source\repos\lippoTest\obj\Debug\net6.0\ref\Penalty.dll
