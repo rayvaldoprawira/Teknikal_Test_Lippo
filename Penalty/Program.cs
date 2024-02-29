@@ -2,38 +2,42 @@
 using System.Collections.Generic;
 using System.Linq;
 
+// Definisi kelas Invoice untuk merepresentasikan data tagihan
 public class Invoice
 {
-    public string Number { get; set; }
-    public DateTime DueDate { get; set; }
-    public decimal TotalAmount { get; set; }
+    public string Number { get; set; } // Nomor tagihan
+    public DateTime DueDate { get; set; } // Tanggal jatuh tempo
+    public decimal TotalAmount { get; set; } // Jumlah total tagihan
 }
 
+// Definisi kelas Payment untuk merepresentasikan data pembayaran
 public class Payment
 {
-    public string PaymentNumber { get; set; }
-    public string InvoiceNumber { get; set; }
-    public DateTime PaymentDate { get; set; }
-    public decimal PaymentAmount { get; set; }
+    public string PaymentNumber { get; set; } // Nomor pembayaran
+    public string InvoiceNumber { get; set; } // Nomor tagihan yang dibayarkan
+    public DateTime PaymentDate { get; set; } // Tanggal pembayaran
+    public decimal PaymentAmount { get; set; } // Jumlah pembayaran
 }
 
+// Definisi kelas Penalty untuk merepresentasikan data denda
 public class Penalty
 {
-    public string InvoiceNumber { get; set; }
-    public int NoPenalty { get; set; }
-    public decimal TagihanOverdue { get; set; }
-    public int HariKeterlambatan { get; set; }
-    public decimal AmountPenalty { get; set; }
+    public string InvoiceNumber { get; set; } // Nomor tagihan yang dikenai denda
+    public int NoPenalty { get; set; } // Nomor denda
+    public decimal TagihanOverdue { get; set; } // Jumlah tagihan yang jatuh tempo
+    public int HariKeterlambatan { get; set; } // Jumlah hari keterlambatan
+    public decimal AmountPenalty { get; set; } // Jumlah denda yang harus dibayarkan
 }
 
+// Program utama
 public class Program
 {
     static void Main(string[] args)
     {
-        // Sample data
-        DateTime currentDate = new DateTime(2023, 4, 29);
+        // Data contoh
+        DateTime currentDate = new DateTime(2023, 4, 29); // Tanggal saat ini
 
-        List<Invoice> invoices = new List<Invoice>
+        List<Invoice> invoices = new List<Invoice> // Daftar tagihan
         {
             new Invoice { Number = "Tagihan#1", DueDate = new DateTime(2023, 1, 10), TotalAmount = 165000 },
             new Invoice { Number = "Tagihan#3", DueDate = new DateTime(2023, 1, 20), TotalAmount = 130000 },
@@ -42,7 +46,8 @@ public class Program
             new Invoice { Number = "Tagihan#4", DueDate = new DateTime(2023, 3, 30), TotalAmount = 416000 }
         };
 
-        List<Payment> payments = new List<Payment>
+        // Daftar pembayaran
+        List<Payment> payments = new List<Payment> 
         {
             new Payment { PaymentNumber = "Payment#1", InvoiceNumber = "Tagihan#1", PaymentDate = new DateTime(2023, 1, 10), PaymentAmount = 165000 },
             new Payment { PaymentNumber = "Payment#2", InvoiceNumber = "Tagihan#3", PaymentDate = new DateTime(2023, 2, 20), PaymentAmount = 130000 },
@@ -52,9 +57,10 @@ public class Program
             new Payment { PaymentNumber = "Payment#4", InvoiceNumber = "Tagihan#4", PaymentDate = new DateTime(2023, 3, 30), PaymentAmount = 50000 }
         };
 
-        List<Penalty> penalties = GeneratePenalties(invoices, payments, currentDate);
+        // Menghasilkan denda
+        List<Penalty> penalties = GeneratePenalties(invoices, payments, currentDate); 
 
-        // Display the dataset
+        // Menampilkan hasil
         Console.WriteLine("Hasilkan dataset sebagai berikut: Hari ini = 29 Apr 23");
         Console.WriteLine("No Tagihan\tNo Penalty\tTagihan Overdue\tHari Keterlambatan\tAmount Penalty");
         foreach (var penalty in penalties)
@@ -63,18 +69,24 @@ public class Program
         }
     }
 
+    // Metode untuk menghasilkan denda
     public static List<Penalty> GeneratePenalties(List<Invoice> invoices, List<Payment> payments, DateTime currentDate)
     {
-        List<Penalty> penalties = new List<Penalty>();
+        // Inisialisasi daftar denda
+        List<Penalty> penalties = new List<Penalty>(); 
 
+        // Iterasi melalui setiap tagihan
         foreach (var invoice in invoices)
         {
-            var latestPayment = payments.Where(p => p.InvoiceNumber == invoice.Number)
+            // Menemukan pembayaran terakhir
+            var latestPayment = payments.Where(p => p.InvoiceNumber == invoice.Number) 
                                         .OrderByDescending(p => p.PaymentDate)
                                         .FirstOrDefault();
 
+            // Jika tidak ada pembayaran atau pembayaran terakhir dilakukan setelah tanggal jatuh tempo
             if (latestPayment == null || latestPayment.PaymentDate > invoice.DueDate)
             {
+                // Hitung denda berdasarkan jumlah hari keterlambatan
                 penalties.Add(new Penalty
                 {
                     InvoiceNumber = invoice.Number,
@@ -84,7 +96,7 @@ public class Program
                     AmountPenalty = invoice.TotalAmount * 0.002m * (currentDate - invoice.DueDate).Days
                 });
             }
-            else
+            else // Jika ada pembayaran, hitung denda berdasarkan sisa tagihan dan jumlah hari keterlambatan sejak pembayaran terakhir
             {
                 decimal remainingAmount = invoice.TotalAmount - latestPayment.PaymentAmount;
                 if (remainingAmount > 0)
@@ -101,6 +113,7 @@ public class Program
             }
         }
 
-        return penalties;
+        // Mengembalikan daftar denda
+        return penalties; 
     }
 }

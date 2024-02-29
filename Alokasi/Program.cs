@@ -6,8 +6,10 @@ namespace PaymentAllocation
 {
     class Program
     {
+        // Program entry point
         public static void Main(string[] args)
         {
+            // List of invoices with due dates and amounts
             List<Invoice> invoices = new List<Invoice>
             {
                 new Invoice { InvoiceNumber = "Tagihan#1", DueDate = new DateTime(2023, 1, 10), Amount = 165000 },
@@ -17,18 +19,22 @@ namespace PaymentAllocation
                 new Invoice { InvoiceNumber = "Tagihan#4", DueDate = new DateTime(2023, 3, 25), Amount = 416000 }
             };
 
+            // Meminta pengguna untuk memasukkan jumlah pembayaran
             Console.Write("Input Payment: ");
             string paymentInput = Console.ReadLine();
 
+            // Validasi dan parsing jumlah pembayaran
             if (!decimal.TryParse(paymentInput, out decimal payment) || payment < 0)
             {
                 Console.WriteLine("Invalid payment amount. Payment amount must be a non-negative number.");
                 return;
             }
 
+            // Memperuntukkan pembayaran untuk setiap tagihan
             decimal remainingPayment = payment;
             List<Invoice> allocatedInvoices = new List<Invoice>();
 
+            // Mengulangi setiap tagihan yang telah diurutkan berdasarkan tanggal jatuh tempo
             foreach (var invoice in invoices.OrderBy(x => x.DueDate))
             {
                 if (remainingPayment >= invoice.Amount)
@@ -50,6 +56,7 @@ namespace PaymentAllocation
                 }
             }
 
+            // Menampilkan tagihan yang sudah dialokasikan
             Console.WriteLine("\nInvoice Allocation:");
             Console.WriteLine("No.\tInvoice Number\tDue Date\tAmount\tAllocated Amount");
 
@@ -59,21 +66,24 @@ namespace PaymentAllocation
                 Console.WriteLine($"{i++}\t{invoice.InvoiceNumber}\t{invoice.DueDate.ToShortDateString()}\t{invoice.Amount}\t{invoice.AllocatedAmount}");
             }
 
-            // Calculate Total Undue and Total Overdue using LINQ
-            DateTime currentDate = new DateTime(2023, 3, 25); // Current date
+            // Menghitung Total Belum Jatuh Tempo dan Total Telat Bayar menggunakan LINQ
+            // Tanggal saat ini
+            DateTime currentDate = new DateTime(2023, 3, 25); 
             decimal totalUndue = invoices.Where(inv => inv.DueDate > currentDate).Sum(inv => inv.Amount);
             decimal totalOverdue = invoices.Where(inv => inv.DueDate <= currentDate).Sum(inv => inv.Amount);
 
+            // Menampilkan total tagihan yang belum jatuh tempo dan total tagihan yang telat bayar
             Console.WriteLine($"\nTotal Undue: {totalUndue}");
             Console.WriteLine($"Total Overdue: {totalOverdue}");
         }
     }
 
+    // Kelas yang merepresentasikan sebuah tagihan
     public class Invoice
     {
-        public string InvoiceNumber { get; set; }
-        public DateTime DueDate { get; set; }
-        public decimal Amount { get; set; }
-        public decimal AllocatedAmount { get; set; }
+        public string InvoiceNumber { get; set; } // Nomor tagihan
+        public DateTime DueDate { get; set; } // Tanggal jatuh tempo
+        public decimal Amount { get; set; } // Jumlah tagihan
+        public decimal AllocatedAmount { get; set; } // Jumlah pembayaran yang dialokasikan
     }
 }
